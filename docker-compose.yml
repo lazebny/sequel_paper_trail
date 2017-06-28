@@ -1,0 +1,16 @@
+app:
+  container_name: sequel_paper_trail_app
+  build: .
+  dockerfile: Dockerfile
+  volumes:
+    - .:/srv/app
+    - ~/.gem/credentials:/root/.gem/credentials
+    - ~/.gitconfig:/root/.gitconfig
+  volumes_from:
+    - bundle_cache
+
+bundle_cache:
+  container_name: sequel_paper_trail_bundle_cache
+  image: busybox
+  volumes:
+    - /bundle_cache
