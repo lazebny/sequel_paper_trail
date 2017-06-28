@@ -1,6 +1,12 @@
 require 'bundler/setup'
-require 'sequel_paper_trail'
+require 'sequel'
+require 'sqlite3'
 require 'pry'
+
+require 'sequel_paper_trail'
+require 'sequel/plugins/has_paper_trail'
+
+Dir['./spec/support/*'].each(&method(:require))
 
 require 'coveralls'
 Coveralls.wear!
