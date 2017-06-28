@@ -1,6 +1,6 @@
 require 'bundler/setup'
 require 'sequel'
-require 'sqlite3'
+# require 'jdbc-sqlite3'
 require 'pry'
 
 require 'sequel_paper_trail'

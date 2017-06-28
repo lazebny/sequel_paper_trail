@@ -1,4 +1,3 @@
-require 'singleton'
 require 'sequel_paper_trail/version'
 require 'sequel_paper_trail/config'
 

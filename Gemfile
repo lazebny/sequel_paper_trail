@@ -15,5 +15,9 @@ group :testing do
   gem 'pry', '~> 0.10.4'
   gem 'rspec', '~> 3.6.0'
   gem 'simplecov', '~> 0.10.0', platforms: :mri, require: false
-  gem 'sqlite3', '~> 1.0'
+  if RUBY_PLATFORM == 'java'
+    gem 'jdbc-sqlite3', '~> 3.0'
+  else
+    gem 'sqlite3', '~> 1.0'
+  end
 end

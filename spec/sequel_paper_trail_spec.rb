@@ -2,14 +2,12 @@ require 'spec_helper'
 
 describe SequelPaperTrail do
   let(:paper_db) { SpecPaperDb.new }
-  let(:db) { Sequel.sqlite(':memory:') }
-
-  let(:item_class) { paper_db.test_model(db) }
-  let(:version_class) { paper_db.version_model(db) }
+  let(:item_class) { paper_db.test_model }
+  let(:version_class) { paper_db.version_model }
 
   before do
-    paper_db.create_test_table(db)
-    paper_db.create_versions_table(db)
+    paper_db.create_test_table
+    paper_db.create_versions_table
 
     item_class.plugin :has_paper_trail,
                       item_class_name: 'TestClass',
@@ -17,7 +15,7 @@ describe SequelPaperTrail do
   end
 
   after do
-    paper_db.drop_all_tables(db)
+    paper_db.drop_all_tables
   end
 
   context '.with_versioning' do

@@ -59,6 +59,7 @@ Quick start:
 
 ```ruby
 
+require 'sequel_paper_trail'
 require 'sequel'
 require 'sequel/plugins/has_paper_trail'
 

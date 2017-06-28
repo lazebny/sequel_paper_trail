@@ -8,6 +8,8 @@
 /spec/reports/
 /tmp/
 
+db.sqlite3
+
 # rspec failure tracking
 .rspec_status
 .bash_history.docker

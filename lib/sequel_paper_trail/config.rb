@@ -1,3 +1,5 @@
+require 'singleton'
+
 module SequelPaperTrail
   # Config storage
   class Config

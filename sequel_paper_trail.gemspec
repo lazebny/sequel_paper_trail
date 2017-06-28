@@ -22,5 +22,5 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files += Dir['{docs}/**/*.{txt,md}']
   s.require_paths     = ['lib']
 
-  s.required_ruby_version = '>= 1.8.7'
+  s.required_ruby_version = '>= 1.9.3'
 end
