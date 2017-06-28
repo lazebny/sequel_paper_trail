@@ -3,6 +3,15 @@ Sequel plugin for Paper Trail
 
 This is a simple Sequel plugin for PaperTrail (with limited functionality).
 
+[![Gem Version](https://badge.fury.io/rb/sequel_paper_trail.svg)](http://badge.fury.io/rb/sequel_paper_trail)
+[![Travis badge](https://travis-ci.org/lazebny/sequel_paper_trail.svg?branch=master)](https://travis-ci.org/lazebny/sequel_paper_trail)
+[![AppVeyor status](https://ci.appveyor.com/api/projects/status/ponccdax7aj4ufw2?svg=true)](https://ci.appveyor.com/project/lazebny/sequel-paper-trail)
+[![Coverage Status](https://coveralls.io/repos/lazebny/sequel_paper_trail/badge.png)](https://coveralls.io/r/lazebny/sequel_paper_trail)
+[![Code Climate Badge](https://codeclimate.com/github/lazebny/sequel_paper_trail.svg)](https://codeclimate.com/github/lazebny/sequel_paper_trail)
+[![Inch CI](http://inch-ci.org/github/lazebny/sequel_paper_trail.svg)](http://inch-ci.org/github/lazebny/sequel_paper_trail)
+[![Dependency Status](https://gemnasium.com/lazebny/sequel_paper_trail.svg)](https://gemnasium.com/lazebny/sequel_paper_trail)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
+
 Limitation
 ------------
 
