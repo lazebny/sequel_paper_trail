@@ -42,7 +42,7 @@ describe Sequel::Plugins::HasPaperTrail do
         whodunnit: 'Admin',
         created_at: Time.now.utc.iso8601,
         transaction_id: nil,
-        object_changes: '{"name":"test","email":"test@test.com","id":1}',
+        object_changes: '{"name":[null,"test"],"email":[null,"test@test.com"],"id":[null,1]}',
         object: nil,
         info: '{"val":1}',
         other_info: '{}'

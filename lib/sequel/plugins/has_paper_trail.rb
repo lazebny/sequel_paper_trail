@@ -52,10 +52,12 @@ module Sequel
 
           return unless SequelPaperTrail.enabled?
 
+          object_changes = values.each_with_object({}) { |(k, v), acc| acc[k] = [nil, v] }
+
           attrs = {
             item_id: id,
             event: :create,
-            object_changes: values.to_json,
+            object_changes: object_changes.to_json,
             object: nil
           }
 
