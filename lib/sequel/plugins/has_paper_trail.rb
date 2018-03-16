@@ -108,7 +108,14 @@ module Sequel
             transaction_id: nil
           }
 
-          extra_params = SequelPaperTrail.info_for_paper_trail.respond_to?(:call) ? SequelPaperTrail.info_for_paper_trail.call : SequelPaperTrail.info_for_paper_trail
+          extra_params = if SequelPaperTrail.info_for_paper_trail.nil?
+              {}
+            elsif SequelPaperTrail.info_for_paper_trail.respond_to?(:call)
+              SequelPaperTrail.info_for_paper_trail.call
+            else
+              SequelPaperTrail.info_for_paper_trail
+            end
+
           create_attrs = default_attrs
                          .merge(extra_params)
                          .merge(attrs)
