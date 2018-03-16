@@ -111,6 +111,10 @@ Set whodunnit:
 
 SequelPaperTrail.whodunnit = 'Mr. Smith'
 
+# or if you are using a web server and want thread safety
+
+SequelPaperTrail.whodunnit = -> { req.env["USER_ID"] }
+
 ```
 
 Set info_for_paper_trail - additional info (Hash) which will be attached to versions table.
@@ -121,7 +125,24 @@ Set info_for_paper_trail - additional info (Hash) which will be attached to vers
 
 SequelPaperTrail.info_for_paper_trail = { release: 'asdf131234', instance: `hostname` }
 
+# or if you are using a web server and want thread safety
+
+SequelPaperTrail.info_for_paper_trail = -> { release: current_release }
+
+
 ```
+
+Note that if you use a lambda for whodunnit or info_for_paper_trail, you may run into errors with binding.  To fix that, you can do something like this:
+
+```
+
+```ruby
+
+this = self
+SequelPaperTrail.whodunnit = -> { this.current_user_id }
+
+```
+
 
 Development
 --------------
@@ -143,4 +164,3 @@ License
 --------------
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
