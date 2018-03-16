@@ -129,7 +129,6 @@ SequelPaperTrail.info_for_paper_trail = { release: 'asdf131234', instance: `host
 
 SequelPaperTrail.info_for_paper_trail = -> { release: current_release }
 
-
 ```
 
 Note that if you use a lambda for whodunnit or info_for_paper_trail, you may run into errors with binding.  To fix that, you can do something like this:
